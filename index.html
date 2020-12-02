@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 4: FaaS</title>
+</head>
+<body>
+
+<h2>HTML Forms</h2>
+
+<h3>Text Output</h3>
+<form action="https://us-central1-assignment-id-faas.cloudfunctions.net/sentence_distribution_text">
+  <label for="book_location">Book URL:</label><br>
+  <input type="text" id="book_location" name="book_location" value="http://www.gutenberg.org/files/1342/1342-0.txt"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Graphical Output</h3>
+<form action="https://us-central1-assignment-id-faas.cloudfunctions.net/sentence_distribution_graph">
+  <label for="book_location">Book URL:</label><br>
+  <input type="text" id="book_location" name="book_location" value="http://www.gutenberg.org/files/1342/1342-0.txt"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you click the "Submit" button, the form-data will be sent to my Cloud Function for respective type of input (text/graphical).</p>
+
+<p>If the URL you enter is already present in the cache, the output will be fetched from there. If not (entering the URL
+  for the first time), the output will be created from scratch and cached for future use.</p>
+
+<p>The resulting output will display whether it was fetched from the cache or not.</p>
+
+</body>
+</html>
